@@ -3,10 +3,10 @@
     <v-container>
       <v-row>
       <v-col cols="12" md="4">
-        <v-text-field v-model="search" label="Search items" prepend-icon="search" color="red"></v-text-field>
+        <v-text-field v-model="search" label="Chercher Produit" prepend-icon="search" color="red"></v-text-field>
       </v-col>
       <v-spacer></v-spacer>
-      <span class="red--text mt-9">{{totalProduct}} Items</span>
+      <span class="red--text mt-9">{{totalProduct}} Articles</span>
 
       
       </v-row>

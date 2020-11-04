@@ -3,14 +3,14 @@
   <v-app-bar color="white" dark app elevation="1" class="line">
     <v-toolbar-title class="text-uppercase red--text">
       <span class="font-weight-light">
-        Cloud
+        B-
       </span>
        <span>
-        Inventory
+        SALUMU
       </span>
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <MiniCart/>
+    
   </v-app-bar>
   <v-navigation-drawer v-model="drawer" dark app mini-variant mini-variant-width="100" class="pink accent-2">
     <v-list>
@@ -40,11 +40,7 @@
           <v-icon>fas fa-cog</v-icon>
         </v-list-item-action>
       </v-list-item>
-      <v-list-item class="mb-8" router to="/">
-        <v-list-item-action>
-          <v-icon>fas fa-signature</v-icon>
-        </v-list-item-action>
-      </v-list-item>
+      
     </v-list>
   </v-navigation-drawer>
 </nav>
@@ -52,11 +48,11 @@
 
 <script>
 import {mapGetters} from "vuex"
-import MiniCart from "./MiniCart.vue";
+
   export default {
     name: 'NavBar',
     components: {
-      MiniCart
+      
     },
     data(){
       return {

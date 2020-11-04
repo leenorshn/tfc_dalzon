@@ -1,5 +1,5 @@
 <template>
-  <v-card :loading="loading" class="mx-auto my-4" max-width="260">
+  <v-card  class="mx-auto my-4" max-width="260">
     <v-img height="160" :src="product.imageUrl"></v-img>
 
     <v-card-title>{{ product.name }}</v-card-title>
@@ -17,7 +17,7 @@
           </v-btn>
         </v-card-actions>
         <v-spacer></v-spacer>
-        <span  class="mr-4 green--text">{{ product.price +" Fc"}}</span>
+        <span  class="mr-4 green--text">{{ product.price +" "+product.monnaie}}</span>
     </v-row>
   </v-card>
 </template>

@@ -1,12 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import products from "./product.js";
+import axios from 'axios'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    products: [...products.products],
+    products: [],
     basket: [],
   },
   mutations: {
@@ -28,6 +28,9 @@ export default new Vuex.Store({
     REMOVE_ITEM: (state, id) => {
       state.basket.splice(id, 1);
     },
+    SET_PRODUCTS:(state,data)=>{
+      state.products=data;
+    }
   },
   getters: {
     countProducts: (state) => {
@@ -44,6 +47,13 @@ export default new Vuex.Store({
       return totalP;
     },
   },
-  actions: {},
+  actions: {
+    ///get products
+    async getProducts({commit}){
+      const response=await axios.get("http://127.0.0.1:4040/products");
+      console.log(response.data);
+      commit("SET_PRODUCTS",response.data);
+    }
+  },
   modules: {},
 });
